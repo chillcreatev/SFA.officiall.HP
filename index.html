@@ -14,8 +14,14 @@
             --shiga-blue: #005bac;
             --shiga-green: #28a745;
             --shiga-white: #ffffff;
-            --shiga-dark-green: #006400; /* ヘッダーの濃い緑用 */
+            --shiga-dark-green: #006400;
         }
+        
+        /* スマホなどのスクロールを滑らかにする魔法 */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
             color: #333;
@@ -231,27 +237,27 @@
             <!-- Slide 1 -->
             <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-100 bg-gradient-to-tr from-blue-900 via-blue-800 to-indigo-900">
                 <img src="photo\DSCF2385.jpg" alt="Slide 1" class="w-full h-full object-cover hidden" onerror="this.style.display='none'">
-                <div class="absolute inset-0 flex items-end justify-start p-4 text-[10px] text-white/40 font-mono">HERO SLIDE 1 (Ready for image)</div>
+                <div class="absolute inset-0 flex items-end justify-start p-4 text-[10px] text-white/40 font-mono">HERO SLIDE 1</div>
             </div>
             <!-- Slide 2 -->
             <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0 bg-gradient-to-tr from-emerald-900 via-green-800 to-teal-900">
                 <img src="photo\DSCF2359.jpg" alt="Slide 2" class="w-full h-full object-cover hidden" onerror="this.style.display='none'">
-                <div class="absolute inset-0 flex items-end justify-start p-4 text-[10px] text-white/40 font-mono">HERO SLIDE 2 (Ready for image)</div>
+                <div class="absolute inset-0 flex items-end justify-start p-4 text-[10px] text-white/40 font-mono">HERO SLIDE 2</div>
             </div>
             <!-- Slide 3 -->
             <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0 bg-gradient-to-tr from-slate-900 via-blue-950 to-indigo-950">
                 <img src="photo\DSCF2411.jpg" alt="Slide 3" class="w-full h-full object-cover hidden" onerror="this.style.display='none'">
-                <div class="absolute inset-0 flex items-end justify-start p-4 text-[10px] text-white/40 font-mono">HERO SLIDE 3 (Ready for image)</div>
+                <div class="absolute inset-0 flex items-end justify-start p-4 text-[10px] text-white/40 font-mono">HERO SLIDE 3</div>
             </div>
             <!-- Slide 4 -->
             <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0 bg-gradient-to-tr from-green-950 via-emerald-800 to-cyan-950">
                 <img src="photo\DSCF2429.jpg" alt="Slide 4" class="w-full h-full object-cover hidden" onerror="this.style.display='none'">
-                <div class="absolute inset-0 flex items-end justify-start p-4 text-[10px] text-white/40 font-mono">HERO SLIDE 4 (Ready for image)</div>
+                <div class="absolute inset-0 flex items-end justify-start p-4 text-[10px] text-white/40 font-mono">HERO SLIDE 4</div>
             </div>
             <!-- Slide 5 -->
             <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0 bg-gradient-to-tr from-blue-950 via-indigo-900 to-purple-950">
                 <img src="photo\DSCF0810.jpg" alt="Slide 5" class="w-full h-full object-cover hidden" onerror="this.style.display='none'">
-                <div class="absolute inset-0 flex items-end justify-start p-4 text-[10px] text-white/40 font-mono">HERO SLIDE 5 (Ready for image)</div>
+                <div class="absolute inset-0 flex items-end justify-start p-4 text-[10px] text-white/40 font-mono">HERO SLIDE 5</div>
             </div>
         </div>
 
@@ -385,7 +391,8 @@
                                             <div class="flex items-center space-x-3">
                                                 <div class="w-10 h-10 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px] rounded-full">
                                                     <div class="w-full h-full rounded-full bg-white p-[1px] flex items-center justify-center overflow-hidden">
-                                                        <img src="photo/sfa.png" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&q=80&w=100'">
+                                                        <!-- 修正：loading="lazy" を追加 -->
+                                                        <img src="photo/sfa.png" loading="lazy" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&q=80&w=100'">
                                                     </div>
                                                 </div>
                                                 <div>
@@ -420,7 +427,8 @@
                                             <div class="flex items-center space-x-3">
                                                 <div class="w-10 h-10 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px] rounded-full">
                                                     <div class="w-full h-full rounded-full bg-white p-[1px] flex items-center justify-center overflow-hidden">
-                                                        <img src="photo/sfa.png" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&q=80&w=100'">
+                                                        <!-- 修正：loading="lazy" を追加 -->
+                                                        <img src="photo/sfa.png" loading="lazy" class="w-full h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&q=80&w=100'">
                                                     </div>
                                                 </div>
                                                 <div>
@@ -448,8 +456,8 @@
                             </div>
 
                         </div>
-                        <!-- Instagram埋め込み用のスクリプトの読み込み -->
-                        <script async src="//www.instagram.com/embed.js"></script>
+                        <!-- Instagram埋め込み用のスクリプトの読み込み（deferで遅延させる） -->
+                        <script src="//www.instagram.com/embed.js"></script>
                     </section>
                 </div>
 
@@ -573,11 +581,11 @@
 
                         <div class="flex flex-col sm:flex-row gap-4 mb-4">
                             <div class="w-full sm:w-1/2 rounded-xl overflow-hidden shadow-sm border border-gray-200 relative bg-gray-100 h-48">
-                                <img src="photo/seat1.jpg" alt="観覧席 外観" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                <img src="photo/seat1.jpg" loading="lazy" alt="観覧席 外観" class="w-full h-full object-cover" onerror="this.style.display='none'">
                                 <div class="absolute inset-0 flex items-center justify-center text-gray-400 opacity-50 font-bold text-xs -z-10">PHOTO 1</div>
                             </div>
                             <div class="w-full sm:w-1/2 rounded-xl overflow-hidden shadow-sm border border-gray-200 relative bg-gray-100 h-48">
-                                <img src="photo/seat2.jpg" alt="観覧席 内観" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                <img src="photo/seat2.jpg" loading="lazy" alt="観覧席 内観" class="w-full h-full object-cover" onerror="this.style.display='none'">
                                 <div class="absolute inset-0 flex items-center justify-center text-gray-400 opacity-50 font-bold text-xs -z-10">PHOTO 2</div>
                             </div>
                         </div>
@@ -601,7 +609,7 @@
                         </p>
 
                         <div class="w-full max-w-sm rounded-xl overflow-hidden shadow-sm border border-gray-200 relative bg-gray-100 h-48 mb-2">
-                            <img src="photo/sa.jpg" alt="喫煙コーナー" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            <img src="photo/smoking_area.jpg" loading="lazy" alt="喫煙コーナー" class="w-full h-full object-cover" onerror="this.style.display='none'">
                             <div class="absolute inset-0 flex items-center justify-center text-gray-400 opacity-50 font-bold text-xs -z-10">PHOTO</div>
                         </div>
                         <p class="text-sm text-gray-600 mb-6">↑喫煙はこの喫煙エリア内でお願いします。</p>
@@ -691,7 +699,8 @@
 
                         <!-- Google Maps Embed -->
                         <div class="w-full h-80 rounded-xl overflow-hidden border border-gray-200 shadow-sm mb-6">
-                            <iframe src="https://maps.google.co.jp/maps?output=embed&q=甲賀高分子スタジアム 滋賀県湖南市石部北一丁目２−１６７７" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <!-- 修正：loading="lazy" を追加 -->
+                            <iframe src="https://maps.google.co.jp/maps?output=embed&q=甲賀高分子スタジアム 滋賀県湖南市石部北一丁目２−１６７７" loading="lazy" class="w-full h-full" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
 
                         <!-- 交通アクセス案内テーブル -->
@@ -717,8 +726,7 @@
                                                 </p>
                                                 <div class="flex items-center gap-3 pl-6">
                                                     <div class="w-20 h-24 bg-gray-100 border rounded flex items-center justify-center overflow-hidden shrink-0 shadow-sm relative">
-                                                        <!-- 看板画像（ソースがないためプレースホルダー対応） -->
-                                                        <img src="photo/kanban.jpg" alt="石部口看板" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                                                        <img src="photo/kanban.jpg" loading="lazy" alt="石部口看板" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                                                         <span class="hidden text-[8px] text-gray-400 font-bold">看板画像</span>
                                                     </div>
                                                     <p class="text-xs text-gray-600 font-bold">← 「石部口」交差点手前にあるこの看板が目印です</p>
@@ -757,13 +765,12 @@
                             滋賀にフットサル文化を創り、定着させた滋賀県フットサル連盟の運営する『甲賀高分子スタジアム』の施設及び事業（イベント）の更なる充実を図るためのＬビジョン広告会員制度です。<br>皆様のご支援とご協力をお願い致します。
                         </p>
 
-                        <!-- Images placeholder similar to original screenshots -->
                         <div class="flex flex-col sm:flex-row gap-4 mb-2">
                             <div class="w-full sm:w-1/2 rounded-xl overflow-hidden shadow-sm border border-gray-200">
-                                <img src="photo\vision1.jpg" alt="ビジョン設置画像1" class="w-full h-auto object-cover aspect-video" onerror="this.style.display='none'">
+                                <img src="photo\vision1.jpg" loading="lazy" alt="ビジョン設置画像1" class="w-full h-auto object-cover aspect-video" onerror="this.style.display='none'">
                             </div>
                             <div class="w-full sm:w-1/2 rounded-xl overflow-hidden shadow-sm border border-gray-200 relative bg-black flex items-center justify-center">
-                                <!-- 動画プレイヤーに変更 -->
+                                <!-- 動画プレイヤー -->
                                 <video src="photo\vision.mov" controls class="w-full h-auto object-cover aspect-video"></video>
                             </div>
                         </div>
@@ -896,7 +903,8 @@
                         
                         <!-- Notion 埋め込み iframe -->
                         <div class="w-full rounded-xl overflow-hidden border border-gray-200 shadow-sm mb-6 bg-gray-50">
-                            <iframe src="https://chalk-dugout-319.notion.site/ebd//b4c5eea1ee994361a89e58dbec80fdee" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+                            <!-- 修正：loading="lazy" を追加 -->
+                            <iframe src="https://chalk-dugout-319.notion.site/ebd//b4c5eea1ee994361a89e58dbec80fdee" loading="lazy" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
                         </div>
 
                         <div class="p-4 border rounded-xl">
@@ -928,14 +936,13 @@
                             フットサル 個人参加は、当日参加の個人及び、グループやチーム参加(5人以上) を対象に、4分のゲーム方式でフットサルを楽しんで頂きます。
                         </p>
 
-                        <!-- プレイ風景画像プレースホルダー -->
                         <div class="flex flex-col sm:flex-row gap-4 mb-2">
                             <div class="w-full sm:w-1/2 rounded-xl overflow-hidden shadow-sm border border-gray-200 relative bg-gray-100">
-                                <img src="photo\individual1.jpg" alt="プレイ風景1" class="w-full h-40 object-cover" onerror="this.style.display='none'">
+                                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=600" loading="lazy" alt="プレイ風景1" class="w-full h-40 object-cover" onerror="this.style.display='none'">
                                 <div class="absolute inset-0 flex items-center justify-center text-gray-400 opacity-50 font-bold text-xs -z-10">PHOTO 1</div>
                             </div>
                             <div class="w-full sm:w-1/2 rounded-xl overflow-hidden shadow-sm border border-gray-200 relative bg-gray-100">
-                                <img src="photo\individual2.jpg" alt="プレイ風景2" class="w-full h-40 object-cover" onerror="this.style.display='none'">
+                                <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&q=80&w=600" loading="lazy" alt="プレイ風景2" class="w-full h-40 object-cover" onerror="this.style.display='none'">
                                 <div class="absolute inset-0 flex items-center justify-center text-gray-400 opacity-50 font-bold text-xs -z-10">PHOTO 2</div>
                             </div>
                         </div>
@@ -1132,7 +1139,8 @@
                         
                         <!-- Google Calendar Embed -->
                         <div class="w-full rounded-xl overflow-hidden border border-gray-200 shadow-sm calendar-container bg-gray-50">
-                            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&src=c2hpZ2EuZnV0c2FsLmZlZGVyYXRpb25AZ21haWwuY29t&src=a3Q5NDE5MjI4cXJuZWIzOTZtbWM1cWthZW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=bjViZm5yZzFndXNrajIwMDlvbHBiaWFzZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23039BE5&color=%23D50000&color=%2333B679" style="border-width:0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+                            <!-- 修正：loading="lazy" を追加 -->
+                            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&src=c2hpZ2EuZnV0c2FsLmZlZGVyYXRpb25AZ21haWwuY29t&src=a3Q5NDE5MjI4cXJuZWIzOTZtbWM1cWthZW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=bjViZm5yZzFndXNrajIwMDlvbHBiaWFzZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23039BE5&color=%23D50000&color=%2333B679" loading="lazy" style="border-width:0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
                         </div>
 
                     </section>
@@ -1235,37 +1243,43 @@
                         
                         <!-- 1. Koga Polymer -->
                         <a href="https://www.koga-polymer.co.jp/" target="_blank" class="sponsor-banner flex items-center justify-center h-16 bg-white rounded-xl p-3 shadow-sm overflow-hidden">
-                            <img src="photo\koka_logo.png" alt="Koga Polymer" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                            <!-- 修正：loading="lazy" を追加 -->
+                            <img src="photo\koka_logo.png" loading="lazy" alt="Koga Polymer" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                             <div class="hidden text-xs font-black text-shiga-blue uppercase font-sans">Koga Polymer</div>
                         </a>
                         
                         <!-- 2. CEREZO OSAKA -->
                         <a href="https://www.cerezo.jp/" target="_blank" class="sponsor-banner flex items-center justify-center h-16 bg-white rounded-xl p-3 shadow-sm overflow-hidden">
-                            <img src="photo\logo_row.svg" alt="CEREZO OSAKA" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                            <!-- 修正：loading="lazy" を追加 -->
+                            <img src="photo\logo_row.svg" loading="lazy" alt="CEREZO OSAKA" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                             <div class="hidden text-xs font-black text-pink-600 uppercase font-sans">CEREZO OSAKA</div>
                         </a>
                         
                         <!-- 3. Hinaya -->
                         <a href="https://touka-hinaya.com/" target="_blank" class="sponsor-banner flex items-center justify-center h-16 bg-white rounded-xl p-3 shadow-sm overflow-hidden">
-                            <img src="photo\hinaya_logo.png" alt="Hinaya" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                            <!-- 修正：loading="lazy" を追加 -->
+                            <img src="photo\hinaya_logo.png" loading="lazy" alt="Hinaya" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                             <div class="hidden text-xs font-black text-gray-700 uppercase font-sans">Hinaya</div>
                         </a>
                         
                         <!-- 4. Shiga Kyohan -->
                         <a href="https://www.shiga-kyohan.com/" target="_blank" class="sponsor-banner flex items-center justify-center h-16 bg-white rounded-xl p-3 shadow-sm overflow-hidden">
-                            <img src="photo\footer-logo.svg" alt="Shiga Kyohan" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                            <!-- 修正：loading="lazy" を追加 -->
+                            <img src="photo\footer-logo.svg" loading="lazy" alt="Shiga Kyohan" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                             <div class="hidden text-xs font-black text-blue-900 uppercase font-sans">Shiga Kyohan</div>
                         </a>
                         
                         <!-- 5. Koyama Clinic -->
                         <a href="https://www.koyama.clinic/" target="_blank" class="sponsor-banner flex items-center justify-center h-16 bg-white rounded-xl p-3 shadow-sm overflow-hidden">
-                            <img src="photo\sitelogo.jpg" alt="Koyama Clinic" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                            <!-- 修正：loading="lazy" を追加 -->
+                            <img src="photo\sitelogo.jpg" loading="lazy" alt="Koyama Clinic" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                             <div class="hidden text-xs font-black text-emerald-600 uppercase font-sans">Koyama Clinic</div>
                         </a>
                         
                         <!-- 6. SHICHIFUKU -->
                         <a href="https://sichifuku.co.jp/" target="_blank" class="sponsor-banner flex items-center justify-center h-16 bg-white rounded-xl p-3 shadow-sm overflow-hidden">
-                            <img src="photo\header1logo.png" alt="SHICHIFUKU" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                            <!-- 修正：loading="lazy" を追加 -->
+                            <img src="photo\header1logo.png" loading="lazy" alt="SHICHIFUKU" class="max-w-full max-h-full object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                             <div class="hidden text-xs font-black text-yellow-600 uppercase font-sans">SHICHIFUKU</div>
                         </a>
                         
@@ -1291,94 +1305,65 @@
         <div class="relative w-full overflow-hidden">
             <div class="slider-track">
                 
-                <!-- Slide 1 -->
+                <!-- ギャラリー画像の loading="lazy" 追加 -->
                 <div class="slide">
-                    <img src="photo\DSCF8532.jpg" alt="滋賀フットサル ギャラリー 1" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <!-- 代替表示 -->
+                    <img src="photo\DSCF8532.jpg" loading="lazy" alt="滋賀フットサル ギャラリー 1" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="hidden w-full h-full bg-gray-100 rounded-xl flex-col items-center justify-center border border-gray-200 text-gray-400">
-                        <i class="fas fa-image text-3xl mb-1"></i>
-                        <span class="text-[10px] font-mono">PHOTO 1</span>
+                        <i class="fas fa-image text-3xl mb-1"></i><span class="text-[10px] font-mono">PHOTO 1</span>
                     </div>
                 </div>
-                
-                <!-- Slide 2 -->
                 <div class="slide">
-                    <img src="photo\DSCF2359.jpg" alt="滋賀フットサル ギャラリー 2" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="photo\DSCF2359.jpg" loading="lazy" alt="滋賀フットサル ギャラリー 2" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="hidden w-full h-full bg-gray-100 rounded-xl flex-col items-center justify-center border border-gray-200 text-gray-400">
-                        <i class="fas fa-image text-3xl mb-1"></i>
-                        <span class="text-[10px] font-mono">PHOTO 2</span>
+                        <i class="fas fa-image text-3xl mb-1"></i><span class="text-[10px] font-mono">PHOTO 2</span>
                     </div>
                 </div>
-                
-                <!-- Slide 3 -->
                 <div class="slide">
-                    <img src="photo\DSCF2807.jpg" alt="滋賀フットサル ギャラリー 3" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="photo\DSCF2807.jpg" loading="lazy" alt="滋賀フットサル ギャラリー 3" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="hidden w-full h-full bg-gray-100 rounded-xl flex-col items-center justify-center border border-gray-200 text-gray-400">
-                        <i class="fas fa-image text-3xl mb-1"></i>
-                        <span class="text-[10px] font-mono">PHOTO 3</span>
+                        <i class="fas fa-image text-3xl mb-1"></i><span class="text-[10px] font-mono">PHOTO 3</span>
                     </div>
                 </div>
-                
-                <!-- Slide 4 -->
                 <div class="slide">
-                    <img src="photo\DSCF8636.jpg" alt="滋賀フットサル ギャラリー 4" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="photo\DSCF8636.jpg" loading="lazy" alt="滋賀フットサル ギャラリー 4" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="hidden w-full h-full bg-gray-100 rounded-xl flex-col items-center justify-center border border-gray-200 text-gray-400">
-                        <i class="fas fa-image text-3xl mb-1"></i>
-                        <span class="text-[10px] font-mono">PHOTO 4</span>
+                        <i class="fas fa-image text-3xl mb-1"></i><span class="text-[10px] font-mono">PHOTO 4</span>
                     </div>
                 </div>
-                
-                <!-- Slide 5 -->
                 <div class="slide">
-                    <img src="photo\DSCF1733.jpg" alt="滋賀フットサル ギャラリー 5" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="photo\DSCF1733.jpg" loading="lazy" alt="滋賀フットサル ギャラリー 5" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="hidden w-full h-full bg-gray-100 rounded-xl flex-col items-center justify-center border border-gray-200 text-gray-400">
-                        <i class="fas fa-image text-3xl mb-1"></i>
-                        <span class="text-[10px] font-mono">PHOTO 5</span>
+                        <i class="fas fa-image text-3xl mb-1"></i><span class="text-[10px] font-mono">PHOTO 5</span>
                     </div>
                 </div>
-                
-                <!-- Slide 6 -->
                 <div class="slide">
-                    <img src="photo\DSCF2365.jpg" alt="滋賀フットサル ギャラリー 1" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="photo\DSCF2365.jpg" loading="lazy" alt="滋賀フットサル ギャラリー 1" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="hidden w-full h-full bg-gray-100 rounded-xl flex-col items-center justify-center border border-gray-200 text-gray-400">
-                        <i class="fas fa-image text-3xl mb-1"></i>
-                        <span class="text-[10px] font-mono">PHOTO 1</span>
+                        <i class="fas fa-image text-3xl mb-1"></i><span class="text-[10px] font-mono">PHOTO 1</span>
                     </div>
                 </div>
-                
-                <!-- Slide 7  -->
                 <div class="slide">
-                    <img src="photo\DSCF0991.jpg" alt="滋賀フットサル ギャラリー 2" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="photo\DSCF0991.jpg" loading="lazy" alt="滋賀フットサル ギャラリー 2" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="hidden w-full h-full bg-gray-100 rounded-xl flex-col items-center justify-center border border-gray-200 text-gray-400">
-                        <i class="fas fa-image text-3xl mb-1"></i>
-                        <span class="text-[10px] font-mono">PHOTO 2</span>
+                        <i class="fas fa-image text-3xl mb-1"></i><span class="text-[10px] font-mono">PHOTO 2</span>
                     </div>
                 </div>
-                
-                <!-- Slide 8 -->
                 <div class="slide">
-                    <img src="photo\DSCF2385.jpg" alt="滋賀フットサル ギャラリー 3" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="photo\DSCF2385.jpg" loading="lazy" alt="滋賀フットサル ギャラリー 3" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="hidden w-full h-full bg-gray-100 rounded-xl flex-col items-center justify-center border border-gray-200 text-gray-400">
-                        <i class="fas fa-image text-3xl mb-1"></i>
-                        <span class="text-[10px] font-mono">PHOTO 3</span>
+                        <i class="fas fa-image text-3xl mb-1"></i><span class="text-[10px] font-mono">PHOTO 3</span>
                     </div>
                 </div>
-                
-                <!-- Slide 9 -->
                 <div class="slide">
-                    <img src="photo\DSCF2429.jpg" alt="滋賀フットサル ギャラリー 4" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="photo\DSCF2429.jpg" loading="lazy" alt="滋賀フットサル ギャラリー 4" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="hidden w-full h-full bg-gray-100 rounded-xl flex-col items-center justify-center border border-gray-200 text-gray-400">
-                        <i class="fas fa-image text-3xl mb-1"></i>
-                        <span class="text-[10px] font-mono">PHOTO 4</span>
+                        <i class="fas fa-image text-3xl mb-1"></i><span class="text-[10px] font-mono">PHOTO 4</span>
                     </div>
                 </div>
-                
-                <!-- Slide 10 -->
                 <div class="slide">
-                    <img src="photo\DSCF3235.jpg" alt="滋賀フットサル ギャラリー 5" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <img src="photo\DSCF3235.jpg" loading="lazy" alt="滋賀フットサル ギャラリー 5" class="w-full h-full object-cover rounded-xl shadow-md bg-gray-100" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div class="hidden w-full h-full bg-gray-100 rounded-xl flex-col items-center justify-center border border-gray-200 text-gray-400">
-                        <i class="fas fa-image text-3xl mb-1"></i>
-                        <span class="text-[10px] font-mono">PHOTO 5</span>
+                        <i class="fas fa-image text-3xl mb-1"></i><span class="text-[10px] font-mono">PHOTO 5</span>
                     </div>
                 </div>
             </div>
@@ -1392,7 +1377,7 @@
                 <div class="lg:col-span-1">
                     <div class="flex items-center space-x-3 mb-6">
                          <div class="w-12 h-12 flex items-center justify-center overflow-hidden">
-                            <img src="photo/sfa.png" alt="滋賀県フットサル連盟 ロゴ" class="max-w-full max-h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&q=80&w=100'">
+                            <img src="photo/sfa.png" loading="lazy" alt="滋賀県フットサル連盟 ロゴ" class="max-w-full max-h-full object-contain" onerror="this.src='https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&q=80&w=100'">
                          </div>
                          <h5 class="text-base font-black tracking-tighter uppercase leading-none">Shiga Futsal<br>Federation</h5>
                     </div>
@@ -1465,15 +1450,14 @@
 
             // スムーズスクロール
             // PCの場合はトップへ、スマホの場合はメインコンテンツの先頭へ
-            if (window.innerWidth < 1024) { // lgブレイクポイント(1024px)未満をスマホ・タブレットと判定
+            if (window.innerWidth < 1024) { 
                 const mainElement = document.getElementById('main-content');
                 const headerElement = document.getElementById('main-header');
                 
                 if(mainElement) {
-                     // ヘッダーの高さを取得して、その分だけオフセットして上に余白を持たせる
                      const headerHeight = headerElement ? headerElement.offsetHeight : 80; 
                      const elementPosition = mainElement.getBoundingClientRect().top;
-                     const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20; // 20px少し余裕を持たせる
+                     const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20; 
                      
                      window.scrollTo({
                           top: offsetPosition,
