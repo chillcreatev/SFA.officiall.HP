@@ -156,7 +156,7 @@
     </div>
 
     <!-- Header -->
-    <header class="bg-white sticky top-0 z-50 border-b shadow-sm">
+    <header class="bg-white sticky top-0 z-50 border-b shadow-sm" id="main-header">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             
             <!-- ロゴとタイトル-->
@@ -313,7 +313,7 @@
             </aside>
 
             <!-- Main Content Area  -->
-            <main class="lg:w-1/2 min-h-[500px]">
+            <main class="lg:w-1/2 min-h-[500px]" id="main-content">
                 
                 <!-- ==================== PAGE: HOME ==================== -->
                 <div id="page-home" class="page-section space-y-10">
@@ -601,7 +601,7 @@
                         </p>
 
                         <div class="w-full max-w-sm rounded-xl overflow-hidden shadow-sm border border-gray-200 relative bg-gray-100 h-48 mb-2">
-                            <img src="photo/sa.jpg" alt="喫煙コーナー" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            <img src="photo/smoking_area.jpg" alt="喫煙コーナー" class="w-full h-full object-cover" onerror="this.style.display='none'">
                             <div class="absolute inset-0 flex items-center justify-center text-gray-400 opacity-50 font-bold text-xs -z-10">PHOTO</div>
                         </div>
                         <p class="text-sm text-gray-600 mb-6">↑喫煙はこの喫煙エリア内でお願いします。</p>
@@ -718,7 +718,7 @@
                                                 <div class="flex items-center gap-3 pl-6">
                                                     <div class="w-20 h-24 bg-gray-100 border rounded flex items-center justify-center overflow-hidden shrink-0 shadow-sm relative">
                                                         <!-- 看板画像（ソースがないためプレースホルダー対応） -->
-                                                        <img src="photo/guide.jpg" alt="石部口看板" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
+                                                        <img src="photo/kanban.jpg" alt="石部口看板" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
                                                         <span class="hidden text-[8px] text-gray-400 font-bold">看板画像</span>
                                                     </div>
                                                     <p class="text-xs text-gray-600 font-bold">← 「石部口」交差点手前にあるこの看板が目印です</p>
@@ -763,7 +763,7 @@
                                 <img src="photo\vision1.jpg" alt="ビジョン設置画像1" class="w-full h-auto object-cover aspect-video" onerror="this.style.display='none'">
                             </div>
                             <div class="w-full sm:w-1/2 rounded-xl overflow-hidden shadow-sm border border-gray-200 relative bg-black flex items-center justify-center">
-                                <!-- Mimicking a video/screen player from the second image -->
+                                <!-- 動画プレイヤーに変更 -->
                                 <video src="photo\vision.mov" controls class="w-full h-auto object-cover aspect-video"></video>
                             </div>
                         </div>
@@ -931,11 +931,11 @@
                         <!-- プレイ風景画像プレースホルダー -->
                         <div class="flex flex-col sm:flex-row gap-4 mb-2">
                             <div class="w-full sm:w-1/2 rounded-xl overflow-hidden shadow-sm border border-gray-200 relative bg-gray-100">
-                                <img src="photo\individual1.jpg" alt="プレイ風景1" class="w-full h-40 object-cover" onerror="this.style.display='none'">
+                                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=600" alt="プレイ風景1" class="w-full h-40 object-cover" onerror="this.style.display='none'">
                                 <div class="absolute inset-0 flex items-center justify-center text-gray-400 opacity-50 font-bold text-xs -z-10">PHOTO 1</div>
                             </div>
                             <div class="w-full sm:w-1/2 rounded-xl overflow-hidden shadow-sm border border-gray-200 relative bg-gray-100">
-                                <img src="photo\individual2.jpg" alt="プレイ風景2" class="w-full h-40 object-cover" onerror="this.style.display='none'">
+                                <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&q=80&w=600" alt="プレイ風景2" class="w-full h-40 object-cover" onerror="this.style.display='none'">
                                 <div class="absolute inset-0 flex items-center justify-center text-gray-400 opacity-50 font-bold text-xs -z-10">PHOTO 2</div>
                             </div>
                         </div>
@@ -1463,11 +1463,29 @@
                 activeMenu.classList.add('active');
             }
 
-            // ページ最上部（ヘッダー下あたり）にスムーズスクロール
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            // スムーズスクロール
+            // PCの場合はトップへ、スマホの場合はメインコンテンツの先頭へ
+            if (window.innerWidth < 1024) { // lgブレイクポイント(1024px)未満をスマホ・タブレットと判定
+                const mainElement = document.getElementById('main-content');
+                const headerElement = document.getElementById('main-header');
+                
+                if(mainElement) {
+                     // ヘッダーの高さを取得して、その分だけオフセットして上に余白を持たせる
+                     const headerHeight = headerElement ? headerElement.offsetHeight : 80; 
+                     const elementPosition = mainElement.getBoundingClientRect().top;
+                     const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20; // 20px少し余裕を持たせる
+                     
+                     window.scrollTo({
+                          top: offsetPosition,
+                          behavior: 'smooth'
+                     });
+                }
+            } else {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
 
             // モバイルメニューを閉じる
             closeMobileMenu();
